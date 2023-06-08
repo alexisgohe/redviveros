@@ -1,0 +1,388 @@
+:root {
+  --color-primario: #FCFAF7;
+  --color-secundario: #fff;
+  --color-text-primary: #0b3d2c;
+  --color-text-secundary: #2a7d2e;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: var(--color-primario);
+}
+
+.container {
+  margin: auto;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.btn {
+  min-width: 100px;
+  height: 40px;
+  color: var(--color-secundario);
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 20px;
+  border: 2px solid var(--color-text-secundary);
+  background: var(--color-text-secundary);
+}
+
+.btn:hover {
+  background: var(--color-text-primary);
+  border: 2px solid var(--color-text-primary);
+  color: white;
+  box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo .img_logo {
+  width: 250px;
+  padding: 0 40px 0 0;
+}
+header .menu {
+  text-align: center;
+}
+header .menu .menu-btn {
+  display: none;
+}
+header .menu a {
+  color: var(--color-text-primary);
+  display: inline-block;
+  margin: 4px 10px;
+  font-size: 15px;
+  padding: 5px 5px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+header .menu a.active, header .menu a:hover {
+  color: var(--color-secundario);
+  background: var(--color-text-secundary);
+}
+
+.slider {
+  position: relative;
+  background: #000116;
+  width: 100%;
+}
+.slider .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+.slider .slide.active {
+  clip-path: circle(150% at 0 50%);
+  transition: 2s;
+}
+.slider .slide img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slider .slide .info {
+  position: absolute;
+  color: #222;
+  background: rgba(11, 61, 44, 0.4);
+  width: 100%;
+  height: 400px;
+}
+.slider .slide .info h2 {
+  font-size: 2em;
+  font-weight: 800;
+}
+.slider .slide .info p {
+  font-size: 1em;
+  font-weight: 400;
+}
+.slider .navigation {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.slider .navigation .prev-btn {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.slider .navigation .next-btn {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.slider .navigation .prev-btn,
+.slider .navigation .next-btn {
+  z-index: 999;
+  font-size: 2em;
+  color: #222;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  cursor: pointer;
+}
+.slider:hover .navigation {
+  opacity: 1;
+}
+
+.a_container {
+  position: absolute;
+  margin-top: -60px;
+  width: 100%;
+}
+.a_container .cursos {
+  width: 80%;
+  margin: auto;
+  margin-top: -60px;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 1px 20px 20px 3px rgba(0, 0, 0, 0.1);
+}
+.a_container .cursos img {
+  width: 100%;
+}
+.a_container .cursos .background {
+  background: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.a_container .cursos .background .capacitacion {
+  width: 24%;
+  padding: 10px;
+  text-align: center;
+  background: white;
+}
+.a_container .cursos .background .capacitacion .img_cap {
+  font-size: 50px;
+  color: var(--color-text-secundary);
+  padding-bottom: 10px;
+}
+.a_container .cursos .background .capacitacion h2 {
+  font-size: 14px;
+  padding-bottom: 10px;
+  height: 50px;
+}
+.a_container .cursos .background .capacitacion h2 a {
+  color: var(--color-text-secundary);
+}
+.a_container .cursos .background .capacitacion p {
+  font-size: 13px;
+  color: #858585;
+}
+
+.criterios {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 200px;
+  padding: 25px 0;
+  color: white;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/img/criterios.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+.criterios .separator {
+  height: 1px;
+  width: 60%;
+  margin: 25px 0;
+  background: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.red_viveros .container {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.red_viveros .container .red_texto {
+  width: 50%;
+  text-align: initial;
+  padding: 0 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.red_viveros .container .red_texto p {
+  padding-bottom: 20px;
+  margin: 0px;
+  text-align: justify;
+}
+.red_viveros .container .video_red {
+  width: 50%;
+  padding: 0 0 0 10px;
+  background-size: cover;
+  background-position: center center;
+}
+.red_viveros .container .video_red iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.nosotros .container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 20px 0;
+}
+.nosotros .container .info_red {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 100%;
+}
+.nosotros .container .info_red .text_1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-secundario);
+  background-image: url(https://landscaping.vamtam.com/wp-content/uploads/2016/12/leaf-left-bg-01.svg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-attachment: scroll;
+  background-size: 500px;
+}
+.nosotros .container .info_red .text_1 h2 {
+  color: var(--color-text-secundary);
+  text-align: center;
+}
+.nosotros .container .info_red .text_1 p {
+  padding: 30px;
+  text-align: justify;
+  color: #5a5a5a;
+}
+.nosotros .container .info_red .div_img_info {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/img/carrusel/CVB2020_3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.nosotros .container .info_red .div_img_info .img_info {
+  width: 100%;
+  height: 100%;
+}
+.nosotros .container .info_red_2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.nosotros .container .info_red_2 p {
+  color: #5a5a5a;
+  padding: 30px;
+  text-align: justify;
+}
+.nosotros .container .info_red_2 .text_2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-text-primary);
+}
+.nosotros .container .info_red_2 .text_2 p {
+  color: var(--color-secundario);
+  padding: 30px;
+  text-align: justify;
+}
+.nosotros .container .info_red_2 .text_3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-secundario);
+}
+.nosotros .container .info_red_2 .text_3 h2 {
+  padding: 15px;
+  color: var(--color-text-secundary);
+  text-align: center;
+}
+.nosotros .container .info_red_2 .text_3 form {
+  padding-top: 10px;
+}
+
+.mapa_red .mapa h2 {
+  font-size: 30px;
+  color: var(--color-text-primary);
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.cont_img_face .container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 15px 0;
+}
+.cont_img_face .container .cont_face {
+  width: 50%;
+  padding: 0 10px 0 0;
+}
+.cont_img_face .container .cont_img {
+  width: 50%;
+  padding: 0 0 0 10px;
+}
+.cont_img_face .container .cont_img .img_contacto {
+  width: 100%;
+}
+
+.container_footer {
+  width: 100%;
+  background-image: url(/img/leafs_dark.png);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 30px;
+  border-top: 5px solid var(--color-text-secundary);
+}
+.container_footer .footer_logo {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+.container_footer .footer_logo .footer_img {
+  height: 100px;
+}
+.container_footer .footer_contacto, .container_footer .footer_siguemos {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: auto;
+  align-items: center;
+}
+.container_footer h3 {
+  color: #fff;
+  padding: 10px;
+}
+.container_footer .footer_contacto span {
+  color: #757575;
+  padding: 5px 0;
+}
+.container_footer .footer_siguemos a {
+  color: #757575;
+  padding: 5px 0;
+}
+.container_footer .footer_siguemos a:hover {
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */

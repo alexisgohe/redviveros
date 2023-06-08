@@ -1,0 +1,31 @@
+.container_footer
+    width: 100%
+    background-image: url(/img/leafs_dark.png)
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    padding: 30px
+    border-top: 5px solid var(--color-text-secundary)
+    .footer_logo
+        display: flex
+        flex-direction: row
+        margin: auto
+        .footer_img
+            height: 100px
+    .footer_contacto, .footer_siguemos
+        display: flex
+        flex-direction: column
+        margin-bottom: auto
+        align-items: center
+    h3
+        color: #fff
+        padding: 10px
+    .footer_contacto
+        span
+            color: #757575
+            padding: 5px 0
+    .footer_siguemos
+        a
+            color: #757575
+            padding: 5px 0
+            &:hover
+                color: #fff

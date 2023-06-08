@@ -1,0 +1,27 @@
+header
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    .logo
+        .img_logo
+            width: 250px
+            padding: 0 40px 0 0
+    .menu
+        text-align: center
+        .menu-btn
+            display: none
+        a
+            color: var(--color-text-primary)
+            display: inline-block
+            margin:4px 10px
+            font-size: 15px
+            padding: 5px 5px
+            border-radius: 5px
+            letter-spacing: 1px
+            transition: all 0.3s ease
+            &.active,
+            &:hover
+                color: var(--color-secundario)
+                background: var(--color-text-secundary)
